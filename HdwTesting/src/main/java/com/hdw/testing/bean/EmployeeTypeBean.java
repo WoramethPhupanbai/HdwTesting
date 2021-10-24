@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Table(name = "employeeType")
 public class EmployeeTypeBean {
 
-	@Id
 	@Column(name = "typeName")
 	String typeName;
 	

@@ -10,11 +10,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "calculateCompensationTransactionBean")
+@Table(name = "calculateCompensationTransaction")
 public class CalculateCompensationTransactionBean {
 
-	@Id
-	
 	@Column(name = "calculateResult")
 	double calculateResult;
 	

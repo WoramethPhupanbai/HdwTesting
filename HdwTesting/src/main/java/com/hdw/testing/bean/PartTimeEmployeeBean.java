@@ -5,10 +5,9 @@ import java.sql.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "partTimeEmployeeBean")
+@Table(name = "partTimeEmployee")
 public class PartTimeEmployeeBean extends EmployeeBean{
 
-	@Id
 	@Column(name = "compensation")
 	double compensation;
 
