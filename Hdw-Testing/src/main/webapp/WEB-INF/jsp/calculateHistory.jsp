@@ -4,7 +4,7 @@
 <%@ page import="com.hdw.testing.bean.*"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%CalculateCompensationTransactionBean calCompen = (CalculateCompensationTransactionBean)request.getAttribute("calCompen");
+<%List<CalculateCompensationTransactionBean> listcalCompen = (List<CalculateCompensationTransactionBean>)request.getAttribute("listcalCompen");
 String datenow = (String)session.getAttribute("datenow");
 SimpleDateFormat datefor = new SimpleDateFormat("dd-MM-yyyy");
 SimpleDateFormat sm = new SimpleDateFormat("HH:mm");
@@ -31,6 +31,7 @@ Date dateNow = datefor.parse(datenow);
 									</tr>
 								</thead>
 								<%int count=0; %>
+								<%for(CalculateCompensationTransactionBean calCompen : listcalCompen){ %>
 								<tbody>
 									<tr>
 										<td><%=count+1 %></td>
@@ -41,7 +42,8 @@ Date dateNow = datefor.parse(datenow);
 									</tr>
 								</tbody>
 								
-							</table>				
+							</table>	
+							<%} %>					
 						</tbody>
 						</table>
 						<a href="listAllEmployee.jsp">listAllEmployee</a>

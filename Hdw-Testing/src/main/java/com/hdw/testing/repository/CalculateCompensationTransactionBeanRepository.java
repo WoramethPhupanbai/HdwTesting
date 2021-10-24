@@ -9,5 +9,5 @@ import com.hdw.testing.bean.PartTimeEmployeeBean;
 
 public interface CalculateCompensationTransactionBeanRepository extends CrudRepository<CalculateCompensationTransactionBean,Long>{
 	public List<CalculateCompensationTransactionBean> findAll();
-	public CalculateCompensationTransactionBean findByEmpID(String empId);
+	public CalculateCompensationTransactionBean findByEmail(String email);
 }

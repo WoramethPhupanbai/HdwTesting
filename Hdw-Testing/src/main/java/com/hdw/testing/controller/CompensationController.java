@@ -25,11 +25,8 @@ public class CompensationController {
 	@GetMapping("/compensation")
 	public String CalculateHistory(HttpServletRequest request){
 		String empId = request.getParameter("empId");
-		CalculateCompensationTransactionBean calCompen = calculateCompensationTransactionBeanRepository.findByEmpID(empId);
-		EmployeeBean employee = null;
-		employee.setEmployeeId(empId);
-		calCompen.setEmployee(employee);
-		request.setAttribute("calCompen", calCompen);
+		Iterable<CalculateCompensationTransactionBean> listcalCompen = calculateCompensationTransactionBeanRepository.findAll();
+		request.setAttribute("listcalCompen", listcalCompen);
 		return "calculateHistory";
 	}
 }
